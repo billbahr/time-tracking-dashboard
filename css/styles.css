@@ -1,0 +1,40 @@
+/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+:root {
+    /* primary colors */
+    --blue: hsl(246, 80%, 60%);
+    --ltred: hsl(15, 100%, 70%);   /* work */
+    --softblue: hsl(195, 74%, 62%);  /* play */
+    --ltred2: hsl(348, 100%, 68%);  /* study */
+    --limegreen: hsl(145, 58%, 55%); /* exercise */
+    --violet: hsl(264, 64%, 52%);  /* social */
+    --softorange: hsl(43, 84%, 65%); /* self care */
+    
+    /* neutral colors */
+    --verydkblue: hsl(226, 43%, 10%);
+    --dkblue: hsl(235, 46%, 20%);
+    --desatblue: hsl(235, 45%, 61%);
+    --paleblue: hsl(236, 100%, 87%);
+    --font-size: 18px;
+    --rubik: "Rubik", Helvetica, sans-serif;
+}
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: var(--rubik);
+    background-color: var(--verydkblue);
+    font-size: var(--font-size);
+    margin: 1rem;
+    color: white;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
