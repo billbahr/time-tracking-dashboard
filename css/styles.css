@@ -31,9 +31,36 @@ body {
     margin: 1rem;
     color: white;
 }
+main {
+    margin: 40px 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: stretch;    
+    gap: 10px;
+}
+h3 {
+    font-size: 14px;
+    color: white;
+}
+.big {
+    font-size: 24px;
+    color: white;
+}
+.small {
+    font-size: 12px;
+    color: var(--desatblue);
+}
+.subject {
+    background-color: var(--dkblue);
+    border-radius: 10px;
+    width: 250px;
+    flex: auto;
+}
 .person {
     background-color: var(--blue);
     border-radius: 10px;
+    padding: 20px 10px;
 }
 .person img {
     max-width: 80px;
@@ -51,6 +78,39 @@ body {
 .person h1 {
     margin: 0;
     padding: 0;
+}
+.menu {
+    padding: 5px;
+}
+.menu ul {
+    margin: 10px;
+    padding: 0;
+    list-style: none;
+}
+.menu ul li {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 14px;
+    color: var(--desatblue);
+}
+.work {
+    background-color: var(--ltred);
+    border-radius: 10px;
+    width: 250px;
+    flex: auto;
+}
+.work div {
+    background-color: var(--dkblue);
+    border-radius: 10px;
+
+}
+.play {
+    background-color: var(--dkblue);
+    border-radius: 10px;    
+    padding: 20px 10px;
+    width: 250px;
+    flex: auto;
 }
 .attribution {
     font-size: 11px;
