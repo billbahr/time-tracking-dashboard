@@ -99,11 +99,15 @@ h3 {
     border-radius: 10px;
     width: 250px;
     flex: auto;
+    background: var(--ltred) url(/images/icon-work.svg) no-repeat right top;  
+    /* background-image: url(images/icon-work.svg); */
 }
 .work div {
     background-color: var(--dkblue);
     border-radius: 10px;
-
+    margin: 40px 0;
+    height: 85%;
+    padding: 20px 10px;
 }
 .play {
     background-color: var(--dkblue);
