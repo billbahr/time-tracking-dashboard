@@ -67,6 +67,11 @@ h3 {
     padding: 0;
     font-weight: 400;
 }
+/* hide data not currently selected */
+.hide {
+    position: absolute;
+    left: -999px;
+}
 .person {
     background-color: var(--blue);
     border-radius: 10px;
@@ -146,6 +151,7 @@ h3 {
 }
 .menu ul li:hover {
     color: white;
+    cursor: pointer;
 }
 .menu ul li.selected {
     color: white;
@@ -161,6 +167,7 @@ h3 {
 }
 .work:hover {
     background-color: var(--desatblue2);
+    cursor: pointer;
 }
 .work img {
     float: right;
@@ -179,6 +186,7 @@ h3 {
 }
 .play:hover {
     background-color: var(--desatblue2);
+    cursor: pointer;
 }
 .play img {
     float: right;
@@ -197,6 +205,7 @@ h3 {
 }
 .study:hover {
     background-color: var(--desatblue2);
+    cursor: pointer;
 }
 .study img {
     float: right;
@@ -242,6 +251,7 @@ h3 {
 }
 .exercise:hover {
     background-color: var(--desatblue2);
+    cursor: pointer;
 }
 .exercise img {
     float: right;
@@ -260,6 +270,7 @@ h3 {
 }
 .social:hover {
     background-color: var(--desatblue2);
+    cursor: pointer;
 }
 .social img {
     float: right;
@@ -278,6 +289,7 @@ h3 {
 }
 .self:hover {
     background-color: var(--desatblue2);
+    cursor: pointer;
 }
 .self img {
     float: right;
