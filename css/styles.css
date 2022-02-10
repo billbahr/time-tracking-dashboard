@@ -32,16 +32,18 @@ body {
     color: white;
 }
 main {
-    margin: 40px 20px;
+    margin: 176px auto;
+    width: 775px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
         "person workbg playbg studybg"
         "person work play study"
-        "person exercisebg socialbg selfbg"
-        "menu exercise social self";
+        "menu exercisebg socialbg selfbg"
+        ". exercise social self";
     justify-items: center;
+    gap: 20px;
 }
 h3 {
     font-size: 14px;
@@ -58,53 +60,64 @@ h3 {
 .person {
     background-color: var(--blue);
     border-radius: 10px;
-    padding: 20px 10px;
+    padding: 20px;
     grid-area: person;
-    width: 250px;
+    width: 178px;
+    margin-bottom: -30px;
 }
 .person img {
-    max-width: 80px;
-    max-height: 80px;
+    max-width: 60px;
+    max-height: 60px;
     border-radius: 50%;
     border-color: white;
     border-width: 2px;
     border-style: solid;
 }
 .person p {
-    margin: 0;
+    margin: 28px 0 0 0;
     padding: 0;
     font-size: 60%;
+    color: var(--paleblue);
 }
 .person h1 {
     margin: 0;
     padding: 0;
+    font-weight: normal;
 }
 .work-bg {
     grid-area: workbg;
     background: var(--ltred) url(/images/icon-work.svg) no-repeat right top;      
     border-radius: 10px;
     height: 140px;
-    width: 250px;
+    width: 178px;
+    margin: 0;
+    padding: 0;
 }
 .play-bg {
     grid-area: playbg;
     background: var(--softblue) url(/images/icon-play.svg) no-repeat right top;      
     border-radius: 10px;
     height: 140px;
-    width: 250px;
+    width: 178px;
+    margin: 0;
+    padding: 0;
 }
 .study-bg {
     grid-area: studybg;
     background: var(--ltred2) url(/images/icon-study.svg) no-repeat right top;          
     border-radius: 10px;
     height: 140px;
-    width: 250px;
+    width: 178px;
+    margin: 0;
+    padding: 0;
 }
 .menu {
     background-color: var(--dkblue);    
     padding: 5px;
     grid-area: menu;
-    width: 250px;
+    width: 178px;
+    height: 140px;
+    border-radius: 10px;
 }
 .menu ul {
     margin: 10px;
@@ -112,38 +125,94 @@ h3 {
     list-style: none;
 }
 .menu ul li {
-    margin: 0;
+    margin: 20px 10px;
     padding: 0;
-    line-height: 1.5;
-    font-size: 14px;
+    font-size: 70%;
     color: var(--desatblue);
+}
+.menu ul li.selected {
+    color: white;
 }
 .work {
     background-color: var(--dkblue);
     border-radius: 10px;
     grid-area: work;
-    height: 200px;
-    width: 250px;
+    height: 140px;
+    width: 178px;
     padding: 10px;
-    margin-top: -100px;
+    margin-top: -130px;
 }
 .play {
     background-color: var(--dkblue);
     border-radius: 10px;    
     grid-area: play;
-    height: 200px;
-    width: 250px;
+    height: 140px;
+    width: 178px;
     padding: 10px;    
-    margin-top: -100px;    
+    margin-top: -130px;    
 }
 .study {
     background-color: var(--dkblue);
     border-radius: 10px;    
     grid-area: study;
-    height: 200px;
-    width: 250px;
+    height: 140px;
+    width: 178px;
     padding: 10px;    
-    margin-top: -100px;    
+    margin-top: -130px;    
+}
+.exercise-bg {
+    grid-area: exercisebg;
+    background: var(--limegreen) url(/images/icon-exercise.svg) no-repeat right top;      
+    border-radius: 10px;
+    height: 140px;
+    width: 178px;
+    margin: 0;
+    padding: 0;
+}
+.social-bg {
+    grid-area: socialbg;
+    background: var(--violet) url(/images/icon-social.svg) no-repeat right top;      
+    border-radius: 10px;
+    height: 140px;
+    width: 178px;
+    margin: 0;
+    padding: 0;
+}
+.self-bg {
+    grid-area: selfbg;
+    background: var(--softorange) url(/images/icon-self-care.svg) no-repeat right top;          
+    border-radius: 10px;
+    height: 140px;
+    width: 178px;
+    margin: 0;
+    padding: 0;
+}
+.exercise {
+    background-color: var(--dkblue);
+    border-radius: 10px;
+    grid-area: exercise;
+    height: 140px;
+    width: 178px;
+    padding: 10px;
+    margin-top: -130px;
+}
+.social {
+    background-color: var(--dkblue);
+    border-radius: 10px;    
+    grid-area: social;
+    height: 140px;
+    width: 178px;
+    padding: 10px;    
+    margin-top: -130px;    
+}
+.self {
+    background-color: var(--dkblue);
+    border-radius: 10px;    
+    grid-area: self;
+    height: 140px;
+    width: 178px;
+    padding: 10px;    
+    margin-top: -130px;    
 }
 .attribution {
     font-size: 11px;
