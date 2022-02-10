@@ -13,6 +13,7 @@
     --verydkblue: hsl(226, 43%, 10%);
     --dkblue: hsl(235, 46%, 20%);
     --desatblue: hsl(235, 45%, 61%);
+    --desatblue2: hsl(235, 41%, 34%);
     --paleblue: hsl(236, 100%, 87%);
     --font-size: 18px;
     --rubik: "Rubik", Helvetica, sans-serif;
@@ -40,22 +41,31 @@ main {
     grid-template-areas: 
         "person workbg playbg studybg"
         "person work play study"
-        "menu exercisebg socialbg selfbg"
-        ". exercise social self";
+        ". exercisebg socialbg selfbg"
+        "menu exercise social self";
     justify-items: center;
     gap: 20px;
 }
 h3 {
-    font-size: 14px;
+    font-size: 12px;
     color: white;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
 }
 .big {
-    font-size: 24px;
+    font-size: 40px;
     color: white;
+    margin: 16px 0 0 0;
+    padding: 0;
+    font-weight: 300;
 }
 .small {
-    font-size: 12px;
-    color: var(--desatblue);
+    font-size: 11px;
+    color: var(--paleblue);
+    margin: 5px 0 0 0;
+    padding: 0;
+    font-weight: 400;
 }
 .person {
     background-color: var(--blue);
@@ -63,7 +73,7 @@ h3 {
     padding: 20px;
     grid-area: person;
     width: 178px;
-    margin-bottom: -30px;
+    margin-bottom: -66px;
 }
 .person img {
     max-width: 60px;
@@ -118,6 +128,7 @@ h3 {
     width: 178px;
     height: 140px;
     border-radius: 10px;
+    margin-top: -130px;
 }
 .menu ul {
     margin: 10px;
@@ -125,10 +136,16 @@ h3 {
     list-style: none;
 }
 .menu ul li {
-    margin: 20px 10px;
+    margin: 20px 10px 0 10px;
     padding: 0;
     font-size: 70%;
     color: var(--desatblue);
+}
+.menu ul li:first-child {
+    margin-top: 30px;
+}
+.menu ul li:hover {
+    color: white;
 }
 .menu ul li.selected {
     color: white;
@@ -139,8 +156,17 @@ h3 {
     grid-area: work;
     height: 140px;
     width: 178px;
-    padding: 10px;
+    padding: 20px;
     margin-top: -130px;
+}
+.work:hover {
+    background-color: var(--desatblue2);
+}
+.work img {
+    float: right;
+    margin-top: -8px;
+    padding: 0;
+    max-width: 14px;
 }
 .play {
     background-color: var(--dkblue);
@@ -148,8 +174,17 @@ h3 {
     grid-area: play;
     height: 140px;
     width: 178px;
-    padding: 10px;    
+    padding: 20px;    
     margin-top: -130px;    
+}
+.play:hover {
+    background-color: var(--desatblue2);
+}
+.play img {
+    float: right;
+    margin-top: -8px;
+    padding: 0;
+    max-width: 14px;
 }
 .study {
     background-color: var(--dkblue);
@@ -157,8 +192,17 @@ h3 {
     grid-area: study;
     height: 140px;
     width: 178px;
-    padding: 10px;    
+    padding: 20px;    
     margin-top: -130px;    
+}
+.study:hover {
+    background-color: var(--desatblue2);
+}
+.study img {
+    float: right;
+    margin-top: -8px;
+    padding: 0;
+    max-width: 14px;
 }
 .exercise-bg {
     grid-area: exercisebg;
@@ -193,8 +237,17 @@ h3 {
     grid-area: exercise;
     height: 140px;
     width: 178px;
-    padding: 10px;
+    padding: 20px;
     margin-top: -130px;
+}
+.exercise:hover {
+    background-color: var(--desatblue2);
+}
+.exercise img {
+    float: right;
+    margin-top: -8px;
+    padding: 0;
+    max-width: 14px;
 }
 .social {
     background-color: var(--dkblue);
@@ -202,8 +255,17 @@ h3 {
     grid-area: social;
     height: 140px;
     width: 178px;
-    padding: 10px;    
+    padding: 20px;    
     margin-top: -130px;    
+}
+.social:hover {
+    background-color: var(--desatblue2);
+}
+.social img {
+    float: right;
+    margin-top: -8px;
+    padding: 0;
+    max-width: 14px;
 }
 .self {
     background-color: var(--dkblue);
@@ -211,8 +273,17 @@ h3 {
     grid-area: self;
     height: 140px;
     width: 178px;
-    padding: 10px;    
+    padding: 20px;    
     margin-top: -130px;    
+}
+.self:hover {
+    background-color: var(--desatblue2);
+}
+.self img {
+    float: right;
+    margin-top: -8px;
+    padding: 0;
+    max-width: 14px;
 }
 .attribution {
     font-size: 11px;
