@@ -15,7 +15,6 @@
     --desatblue: hsl(235, 45%, 61%);
     --desatblue2: hsl(235, 41%, 34%);
     --paleblue: hsl(236, 100%, 87%);
-    --font-size: 18px;
     --rubik: "Rubik", Helvetica, sans-serif;
 }
 /* apply a natural box layout model to all elements, but allowing components to change */
@@ -28,7 +27,6 @@ html {
 body {
     font-family: var(--rubik);
     background-color: var(--verydkblue);
-    font-size: var(--font-size);
     margin: 1rem;
     color: white;
 }
@@ -47,21 +45,21 @@ main {
     gap: 20px;
 }
 h3 {
-    font-size: 12px;
+    font-size: 0.75rem;
     color: white;
     margin: 0;
     padding: 0;
     font-weight: normal;
 }
 .big {
-    font-size: 40px;
+    font-size: 2.5rem;
     color: white;
     margin: 16px 0 0 0;
     padding: 0;
     font-weight: 300;
 }
 .small {
-    font-size: 11px;
+    font-size: 0.7rem;
     color: var(--paleblue);
     margin: 5px 0 0 0;
     padding: 0;
@@ -91,7 +89,7 @@ h3 {
 .person p {
     margin: 28px 0 0 0;
     padding: 0;
-    font-size: 60%;
+    font-size: 0.6rem;
     color: var(--paleblue);
 }
 .person h1 {
@@ -143,7 +141,7 @@ h3 {
 .menu ul li {
     margin: 20px 10px 0 10px;
     padding: 0;
-    font-size: 70%;
+    font-size: 0.7rem;
     color: var(--desatblue);
 }
 .menu ul li:first-child {
@@ -298,7 +296,7 @@ h3 {
     max-width: 14px;
 }
 .attribution {
-    font-size: 11px;
+    font-size: .7rem;
     text-align: center;
 }
 .attribution a {
