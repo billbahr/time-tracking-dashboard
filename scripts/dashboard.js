@@ -1,5 +1,5 @@
 
-const menuOptions = document.querySelectorAll('.menu li');
+const menuOptions = document.querySelectorAll('.person nav li');
 const dailyData = document.querySelectorAll('.daily');
 const weeklyData = document.querySelectorAll('.weekly');
 const monthlyData = document.querySelectorAll('.monthly');

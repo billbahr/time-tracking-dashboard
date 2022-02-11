@@ -40,7 +40,8 @@ main {
         "person work play study"
         "person exercise social self";
     justify-items: center;
-    gap: 20px;
+    column-gap: 20px;
+    row-gap: 30px;
 }
 h3 {
     font-size: 0.75rem;
@@ -69,12 +70,16 @@ h3 {
     left: -999px;
 }
 .person {
-    background-color: var(--blue);
+    background-color: var(--dkblue);
     border-radius: 10px;
-    padding: 20px;
     grid-area: person;
     width: 178px;
-    margin-bottom: -66px;
+}
+.person div {
+    background-color: var(--blue);
+    width: 100%;
+    padding: 20px 20px 40px 20px;
+    border-radius: 10px;
 }
 .person img {
     max-width: 60px;
@@ -95,6 +100,30 @@ h3 {
     padding: 0;
     font-weight: normal;
 }
+.person nav {   
+    width: 178px;
+}
+.person nav ul {
+    margin: 10px 10px 30px 10px;
+    padding: 0;
+    list-style: none;
+}
+.person nav ul li {
+    margin: 20px 10px 0 10px;
+    padding: 0;
+    font-size: 0.7rem;
+    color: var(--desatblue);
+}
+.person nav ul li:first-child {
+    margin-top: 30px;
+}
+.person nav ul li:hover {
+    color: white;
+    cursor: pointer;
+}
+.person nav ul li.selected {
+    color: white;
+}
 .work {
     grid-area: work;
     background: var(--ltred) url(/images/icon-work.svg) no-repeat right top;      
@@ -102,7 +131,7 @@ h3 {
     height: 140px;
     width: 178px;
     margin: 0;
-    padding-top: 40px;
+    padding-top: 30px;
 }
 .work div {
     background-color: var(--dkblue);
@@ -111,7 +140,7 @@ h3 {
     width: 178px;
     padding: 20px;
 }
-.work:hover {
+.work div:hover {
     background-color: var(--desatblue2);
     cursor: pointer;
 }
@@ -128,16 +157,16 @@ h3 {
     height: 140px;
     width: 178px;
     margin: 0;
-    padding-top: 40px;
+    padding-top: 30px;
 }
-.play {
+.play div {
     background-color: var(--dkblue);
     border-radius: 10px;    
     height: 140px;
     width: 178px;
     padding: 20px;    
 }
-.play:hover {
+.play div:hover {
     background-color: var(--desatblue2);
     cursor: pointer;
 }
@@ -154,7 +183,7 @@ h3 {
     height: 140px;
     width: 178px;
     margin: 0;
-    padding-top: 40px;
+    padding-top: 30px;
 }
 .study div {
     background-color: var(--dkblue);
@@ -163,7 +192,7 @@ h3 {
     width: 178px;
     padding: 20px;    
 }
-.study:hover {
+.study div:hover {
     background-color: var(--desatblue2);
     cursor: pointer;
 }
@@ -173,72 +202,23 @@ h3 {
     padding: 0;
     max-width: 14px;
 }
-.menu {
-    background-color: var(--dkblue);    
-    padding: 5px;
-    width: 178px;
-    height: 140px;
-    border-radius: 10px;
-    margin-top: -130px;
-}
-.menu ul {
-    margin: 10px;
-    padding: 0;
-    list-style: none;
-}
-.menu ul li {
-    margin: 20px 10px 0 10px;
-    padding: 0;
-    font-size: 0.7rem;
-    color: var(--desatblue);
-}
-.menu ul li:first-child {
-    margin-top: 30px;
-}
-.menu ul li:hover {
-    color: white;
-    cursor: pointer;
-}
-.menu ul li.selected {
-    color: white;
-}
-.exercise-bg {
-    grid-area: exercisebg;
+.exercise {
+    grid-area: exercise;
     background: var(--limegreen) url(/images/icon-exercise.svg) no-repeat right top;      
     border-radius: 10px;
     height: 140px;
     width: 178px;
     margin: 0;
-    padding: 0;
+    padding-top: 30px;
 }
-.social-bg {
-    grid-area: socialbg;
-    background: var(--violet) url(/images/icon-social.svg) no-repeat right top;      
-    border-radius: 10px;
-    height: 140px;
-    width: 178px;
-    margin: 0;
-    padding: 0;
-}
-.self-bg {
-    grid-area: selfbg;
-    background: var(--softorange) url(/images/icon-self-care.svg) no-repeat right top;          
-    border-radius: 10px;
-    height: 140px;
-    width: 178px;
-    margin: 0;
-    padding: 0;
-}
-.exercise {
+.exercise div {
     background-color: var(--dkblue);
     border-radius: 10px;
-    grid-area: exercise;
     height: 140px;
     width: 178px;
     padding: 20px;
-    margin-top: -130px;
 }
-.exercise:hover {
+.exercise div:hover {
     background-color: var(--desatblue2);
     cursor: pointer;
 }
@@ -249,15 +229,22 @@ h3 {
     max-width: 14px;
 }
 .social {
-    background-color: var(--dkblue);
-    border-radius: 10px;    
     grid-area: social;
+    background: var(--violet) url(/images/icon-social.svg) no-repeat right top;      
+    border-radius: 10px;
     height: 140px;
     width: 178px;
-    padding: 20px;    
-    margin-top: -130px;    
+    margin: 0;
+    padding-top: 30px;
 }
-.social:hover {
+.social div {
+    background-color: var(--dkblue);
+    border-radius: 10px;    
+    height: 140px;
+    width: 178px;
+    padding: 20px;     
+}
+.social div:hover {
     background-color: var(--desatblue2);
     cursor: pointer;
 }
@@ -268,15 +255,22 @@ h3 {
     max-width: 14px;
 }
 .self {
-    background-color: var(--dkblue);
-    border-radius: 10px;    
     grid-area: self;
+    background: var(--softorange) url(/images/icon-self-care.svg) no-repeat right top;          
+    border-radius: 10px;
     height: 140px;
     width: 178px;
-    padding: 20px;    
-    margin-top: -130px;    
+    margin: 0;
+    padding-top: 30px;
 }
-.self:hover {
+.self div {
+    background-color: var(--dkblue);
+    border-radius: 10px;    
+    height: 140px;
+    width: 178px;
+    padding: 20px;      
+}
+.self div:hover {
     background-color: var(--desatblue2);
     cursor: pointer;
 }
