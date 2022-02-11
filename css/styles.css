@@ -37,10 +37,8 @@ main {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-        "person workbg playbg studybg"
         "person work play study"
-        ". exercisebg socialbg selfbg"
-        "menu exercise social self";
+        "person exercise social self";
     justify-items: center;
     gap: 20px;
 }
@@ -97,37 +95,87 @@ h3 {
     padding: 0;
     font-weight: normal;
 }
-.work-bg {
-    grid-area: workbg;
+.work {
+    grid-area: work;
     background: var(--ltred) url(/images/icon-work.svg) no-repeat right top;      
     border-radius: 10px;
     height: 140px;
     width: 178px;
     margin: 0;
-    padding: 0;
+    padding-top: 40px;
 }
-.play-bg {
-    grid-area: playbg;
+.work div {
+    background-color: var(--dkblue);
+    border-radius: 10px;
+    height: 140px;
+    width: 178px;
+    padding: 20px;
+}
+.work:hover {
+    background-color: var(--desatblue2);
+    cursor: pointer;
+}
+.work img {
+    float: right;
+    margin-top: -8px;
+    padding: 0;
+    max-width: 14px;
+}
+.play {
+    grid-area: play;
     background: var(--softblue) url(/images/icon-play.svg) no-repeat right top;      
     border-radius: 10px;
     height: 140px;
     width: 178px;
     margin: 0;
-    padding: 0;
+    padding-top: 40px;
 }
-.study-bg {
-    grid-area: studybg;
+.play {
+    background-color: var(--dkblue);
+    border-radius: 10px;    
+    height: 140px;
+    width: 178px;
+    padding: 20px;    
+}
+.play:hover {
+    background-color: var(--desatblue2);
+    cursor: pointer;
+}
+.play img {
+    float: right;
+    margin-top: -8px;
+    padding: 0;
+    max-width: 14px;
+}
+.study {
+    grid-area: study;
     background: var(--ltred2) url(/images/icon-study.svg) no-repeat right top;          
     border-radius: 10px;
     height: 140px;
     width: 178px;
     margin: 0;
+    padding-top: 40px;
+}
+.study div {
+    background-color: var(--dkblue);
+    border-radius: 10px;    
+    height: 140px;
+    width: 178px;
+    padding: 20px;    
+}
+.study:hover {
+    background-color: var(--desatblue2);
+    cursor: pointer;
+}
+.study img {
+    float: right;
+    margin-top: -8px;
     padding: 0;
+    max-width: 14px;
 }
 .menu {
     background-color: var(--dkblue);    
     padding: 5px;
-    grid-area: menu;
     width: 178px;
     height: 140px;
     border-radius: 10px;
@@ -153,63 +201,6 @@ h3 {
 }
 .menu ul li.selected {
     color: white;
-}
-.work {
-    background-color: var(--dkblue);
-    border-radius: 10px;
-    grid-area: work;
-    height: 140px;
-    width: 178px;
-    padding: 20px;
-    margin-top: -130px;
-}
-.work:hover {
-    background-color: var(--desatblue2);
-    cursor: pointer;
-}
-.work img {
-    float: right;
-    margin-top: -8px;
-    padding: 0;
-    max-width: 14px;
-}
-.play {
-    background-color: var(--dkblue);
-    border-radius: 10px;    
-    grid-area: play;
-    height: 140px;
-    width: 178px;
-    padding: 20px;    
-    margin-top: -130px;    
-}
-.play:hover {
-    background-color: var(--desatblue2);
-    cursor: pointer;
-}
-.play img {
-    float: right;
-    margin-top: -8px;
-    padding: 0;
-    max-width: 14px;
-}
-.study {
-    background-color: var(--dkblue);
-    border-radius: 10px;    
-    grid-area: study;
-    height: 140px;
-    width: 178px;
-    padding: 20px;    
-    margin-top: -130px;    
-}
-.study:hover {
-    background-color: var(--desatblue2);
-    cursor: pointer;
-}
-.study img {
-    float: right;
-    margin-top: -8px;
-    padding: 0;
-    max-width: 14px;
 }
 .exercise-bg {
     grid-area: exercisebg;
