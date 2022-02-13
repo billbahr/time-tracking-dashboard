@@ -3,12 +3,17 @@ const menuOptions = document.querySelectorAll('.person nav li');
 const dailyData = document.querySelectorAll('.daily');
 const weeklyData = document.querySelectorAll('.weekly');
 const monthlyData = document.querySelectorAll('.monthly');
-const workData = document.querySelectorAll('.work>p');
-const playData = document.querySelectorAll('.play>p');
-const studyData = document.querySelectorAll('.study>p');
-const exerciseData = document.querySelectorAll('.exercise>p');
-const socialData = document.querySelectorAll('.social>p');
-const selfData = document.querySelectorAll('.self>p');
+const htmlData[0] = document.querySelectorAll('.work>div>p');
+const htmlData.push(document.querySelectorAll('.play>div>p'));
+const studyData = document.querySelectorAll('.study>div>p');
+const exerciseData = document.querySelectorAll('.exercise>div>p');
+const socialData = document.querySelectorAll('.social>div>p');
+const selfData = document.querySelectorAll('.self>div>p');
+
+
+function updateHTML(data) {
+
+}
 
 function loadData() {
     fetch("data.json")
