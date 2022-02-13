@@ -123,7 +123,9 @@ h3 {
 }
 .work {
     grid-area: work;
-    background: var(--ltred) url(/images/icon-work.svg) no-repeat right top;      
+    background: var(--ltred) url(/images/icon-work.svg) no-repeat; 
+    background-size: 3.25rem 3.25rem;  
+    background-position: calc(100% - 10px) calc(0% - 10px);     
     border-radius: 10px;
     height: 140px;
     width: 178px;
@@ -149,7 +151,9 @@ h3 {
 }
 .play {
     grid-area: play;
-    background: var(--softblue) url(/images/icon-play.svg) no-repeat right top;      
+    background: var(--softblue) url(/images/icon-play.svg) no-repeat;     
+    background-size: 3.25rem 3.25rem;  
+    background-position: calc(100% - 10px) calc(0% - 10px);       
     border-radius: 10px;
     height: 140px;
     width: 178px;
@@ -175,7 +179,9 @@ h3 {
 }
 .study {
     grid-area: study;
-    background: var(--ltred2) url(/images/icon-study.svg) no-repeat right top;          
+    background: var(--ltred2) url(/images/icon-study.svg) no-repeat;       
+    background-size: 3.25rem 3.25rem;  
+    background-position: calc(100% - 10px) calc(0% - 10px);           
     border-radius: 10px;
     height: 140px;
     width: 178px;
@@ -201,7 +207,9 @@ h3 {
 }
 .exercise {
     grid-area: exercise;
-    background: var(--limegreen) url(/images/icon-exercise.svg) no-repeat right top;      
+    background: var(--limegreen) url(/images/icon-exercise.svg) no-repeat;  
+    background-size: 3.25rem 3.25rem;  
+    background-position: calc(100% - 10px) calc(0% - 10px);            
     border-radius: 10px;
     height: 140px;
     width: 178px;
@@ -227,7 +235,9 @@ h3 {
 }
 .social {
     grid-area: social;
-    background: var(--violet) url(/images/icon-social.svg) no-repeat right top;      
+    background: var(--violet) url(/images/icon-social.svg) no-repeat;   
+    background-size: 3.25rem 3.25rem;  
+    background-position: calc(100% - 10px) calc(0% - 10px);          
     border-radius: 10px;
     height: 140px;
     width: 178px;
@@ -253,7 +263,9 @@ h3 {
 }
 .self {
     grid-area: self;
-    background: var(--softorange) url(/images/icon-self-care.svg) no-repeat right top;          
+    background: var(--softorange) url(/images/icon-self-care.svg) no-repeat;       
+    background-size: 3.25rem 3.25rem;  
+    background-position: calc(100% - 10px) calc(0% - 10px);  
     border-radius: 10px;
     height: 140px;
     width: 178px;

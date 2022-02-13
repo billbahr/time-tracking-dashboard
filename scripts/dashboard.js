@@ -3,17 +3,13 @@ const menuOptions = document.querySelectorAll('.person nav li');
 const dailyData = document.querySelectorAll('.daily');
 const weeklyData = document.querySelectorAll('.weekly');
 const monthlyData = document.querySelectorAll('.monthly');
-const htmlData[0] = document.querySelectorAll('.work>div>p');
-const htmlData.push(document.querySelectorAll('.play>div>p'));
-const studyData = document.querySelectorAll('.study>div>p');
-const exerciseData = document.querySelectorAll('.exercise>div>p');
-const socialData = document.querySelectorAll('.social>div>p');
-const selfData = document.querySelectorAll('.self>div>p');
-
-
-function updateHTML(data) {
-
-}
+const htmlData = new Array(6);
+htmlData[0] = document.querySelectorAll('.work>div>p');
+htmlData[1] = document.querySelectorAll('.play>div>p');
+htmlData[2] = document.querySelectorAll('.study>div>p');
+htmlData[3] = document.querySelectorAll('.exercise>div>p');
+htmlData[4] = document.querySelectorAll('.social>div>p');
+htmlData[5] = document.querySelectorAll('.self>div>p');
 
 function loadData() {
     fetch("data.json")
@@ -24,29 +20,31 @@ function loadData() {
         return response.json();
     })
     .then(data => {
-        workData.forEach(para => {
-            if(para.classList.contains('daily')) {
-                if(para.classList.contains('big')) {
-                    para.innerHTML = data[0].timeframes.daily.current + "hrs";
-                } else {
-                    para.innerHTML = "Yesterday - " + data[0].timeframes.daily.previous + "hrs";
+        for (let i = 0; i < 6; i++) {
+            htmlData[i].forEach(para => {
+                if(para.classList.contains('daily')) {
+                    if(para.classList.contains('big')) {
+                        para.innerHTML = data[i].timeframes.daily.current + "hrs";
+                    } else {
+                        para.innerHTML = "Yesterday - " + data[i].timeframes.daily.previous + "hrs";
+                    }
                 }
-            }
-            if(para.classList.contains('weekly')) {
-                if(para.classList.contains('big')) {
-                    para.innerHTML = data[0].timeframes.weekly.current + "hrs";
-                } else {
-                    para.innerHTML = "Last Week - " + data[0].timeframes.weekly.previous + "hrs";
+                if(para.classList.contains('weekly')) {
+                    if(para.classList.contains('big')) {
+                        para.innerHTML = data[i].timeframes.weekly.current + "hrs";
+                    } else {
+                        para.innerHTML = "Last Week - " + data[i].timeframes.weekly.previous + "hrs";
+                    }
                 }
-            }
-            if(para.classList.contains('monthly')) {
-                if(para.classList.contains('big')) {
-                    para.innerHTML = data[0].timeframes.monthly.current + "hrs";
-                } else {
-                    para.innerHTML = "Last Month - " + data[0].timeframes.monthly.previous + "hrs";
-                }
-            }                        
-        })
+                if(para.classList.contains('monthly')) {
+                    if(para.classList.contains('big')) {
+                        para.innerHTML = data[i].timeframes.monthly.current + "hrs";
+                    } else {
+                        para.innerHTML = "Last Month - " + data[i].timeframes.monthly.previous + "hrs";
+                    }
+                }                        
+            })
+        }
     })
     .catch(error => {
         console.log(error);
