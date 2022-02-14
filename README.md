@@ -11,10 +11,8 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 
 ## Overview
@@ -46,52 +44,65 @@ Users should be able to:
 - Javascript
 
 ### What I learned
+I'm sure there must be a way more efficient way to do this, but I'm excited I was able to load the data from the local json file, and I like how I setup this array and loop to get it into the html structure:
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+const htmlData = new Array(6);
+htmlData[0] = document.querySelectorAll('.work>div>p');
+htmlData[1] = document.querySelectorAll('.play>div>p');
+htmlData[2] = document.querySelectorAll('.study>div>p');
+htmlData[3] = document.querySelectorAll('.exercise>div>p');
+htmlData[4] = document.querySelectorAll('.social>div>p');
+htmlData[5] = document.querySelectorAll('.self>div>p');
+
+function loadData() {
+    fetch("data.json")
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        for (let i = 0; i < 6; i++) {
+            htmlData[i].forEach(para => {
+                if(para.classList.contains('daily')) {
+                    if(para.classList.contains('big')) {
+                        para.innerHTML = data[i].timeframes.daily.current + "hrs";
+                    } else {
+                        para.innerHTML = "Yesterday - " + data[i].timeframes.daily.previous + "hrs";
+                    }
+                }
+                if(para.classList.contains('weekly')) {
+                    if(para.classList.contains('big')) {
+                        para.innerHTML = data[i].timeframes.weekly.current + "hrs";
+                    } else {
+                        para.innerHTML = "Last Week - " + data[i].timeframes.weekly.previous + "hrs";
+                    }
+                }
+                if(para.classList.contains('monthly')) {
+                    if(para.classList.contains('big')) {
+                        para.innerHTML = data[i].timeframes.monthly.current + "hrs";
+                    } else {
+                        para.innerHTML = "Last Month - " + data[i].timeframes.monthly.previous + "hrs";
+                    }
+                }                        
+            })
+        }
+    })
+    .catch(error => {
+        console.log(error);
+    });
 }
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [CSS Tricks](https://css-tricks.com/) - As always, CSS Tricks was very useful for figuring out the CSS. I used it a lot for the Grid properties.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Github - [billbahr](https://github.com/billbahr)
+- Frontend Mentor - [@billbahr](https://www.frontendmentor.io/profile/billbahr)
+- Twitter - [@billbahr](https://www.twitter.com/billbahr)
