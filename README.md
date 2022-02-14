@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- [Solution website](https://github.com/billbahr/time-tracking-dashboard)
+- [Solution website](https://billbahr.github.io/time-tracking-dashboard/)
 
 ## My process
 
